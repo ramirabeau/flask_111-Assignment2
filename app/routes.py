@@ -3,7 +3,7 @@
 """HTTP route definitions"""
 
 
-from flask import request, renderm render_template
+from flask import request, render_template
 from app import app
 from app.database import create, read, delete, scan
 from datetime import datetime
