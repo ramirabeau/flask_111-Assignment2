@@ -50,6 +50,20 @@ def update_product(pid):
     return {"ok": out, "message": "Updated"
     }
 
+
+@app.route("/agent")
+def agent():
+    user_agent = request.headers.get("User_Agent")
+    return "<p>Your user agent is %s</p>" % user_agent
+
+@app.route("/myroute")
+def my_view_function():
+    return render_template("index.html")
+
 @app.route("/user/<name>")
-def show_user(name):
+def user(name):
     return render_template("user.html", name=name)
+
+@app.route("/about")
+def about():
+    return render_template("about.html", first_name="Raven", last_name="Mirabeau", hobbies="RPI projects")
