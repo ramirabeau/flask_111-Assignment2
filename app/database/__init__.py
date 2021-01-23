@@ -44,6 +44,7 @@ def read(prod_id):
     cursor.close()
     return output_formatter(results)
 
+""" UPDATE user SET first_name='Raven', last_name='Mirabeau' WHERE id=1; """
 def update(prod_id, fields: dict):
     field_string = ", ".join(
                     "%s=\"%s\"" % (key, val)

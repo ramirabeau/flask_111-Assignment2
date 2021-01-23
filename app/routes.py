@@ -49,7 +49,7 @@ def update_product(pid):
     out = update(int(pid), product_data)
     return {"ok": out, "message": "Updated"
     }
-
+"""
 
 @app.route("/agent")
 def agent():
@@ -67,3 +67,5 @@ def user(name):
 @app.route("/about")
 def about():
     return render_template("about.html", first_name="Raven", last_name="Mirabeau", hobbies="RPI projects")
+
+    """

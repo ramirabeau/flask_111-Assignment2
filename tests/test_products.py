@@ -23,7 +23,7 @@ def test_create():
 
 def test_update():
     sample = {"name": "banana", "price": 2000.0,}
-    resp = request.post("http://127.0.0.1:5000/products/8", json=sample)
+    resp = request.put("http://127.0.0.1:5000/products/8", json=sample)
     pprint(resp.json())
 
 if __name__ == "__main__":
